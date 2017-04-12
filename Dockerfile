@@ -5,6 +5,7 @@ FROM ubuntu:16.04
 RUN apt-get update && apt-get install -y \
     build-essential `# well, essential` \ 
     curl            `# needed to install dmd` \
+    gdb             `# pretty essential, so I can avoid an apt-get in derived images` \
     xz-utils        `# needed to install dmd`
 
 CMD ["bash"]
